@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 function App() {
   useEffect(() =>{
     //this is called twice
+    //after removing the React.StrictMode it runs for only once
     Axios.get("https://catfact.ninja/fact").then((res) =>{
       setFact(res.data.fact);
     })
